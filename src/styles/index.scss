@@ -1,0 +1,54 @@
+@import 'mediaQuery';
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+.root {
+  height: 100%;
+  overflow: hidden;
+
+  @include laptop {
+    font-size: 16px;
+  }
+
+  @include laptop1650min {
+    font-size: 20.8px;
+  }
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  margin: 0;
+}
+
+.dashboard-topbar {
+  background-color: black;
+  height: 4em;
+
+  .left-section {
+    justify-self: start;
+
+    img {
+      width: 10%;
+    }
+  }
+  .right-section {
+    align-items: center;
+    color: $text-header;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(4, max-content);
+    justify-self: right;
+  }
+  h1 {
+    color: $text-header;
+  }
+}

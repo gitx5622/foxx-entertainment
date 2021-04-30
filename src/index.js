@@ -2,17 +2,31 @@ import React from 'react';
 import { hydrate } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import reportWebVitals from './reportWebVitals';
 import DataStore from "./dataStore";
-import App from './App';
-import './index.css';
+import App from './components/App';
+import './styles/index.scss';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: { main: '#E51A23' },
+        secondary: { main: '#4b6584' },
+    },
+    typography: {
+        fontFamily: "'Quicksand', sans-serif",
+    },
+});
 
 window.onload = () => {
     hydrate(
         <Provider store={DataStore}>
+            <ThemeProvider theme={theme}>
             <Router>
                 <App />
             </Router>
+            </ThemeProvider>
         </Provider>,
         document.getElementById('root')
     );

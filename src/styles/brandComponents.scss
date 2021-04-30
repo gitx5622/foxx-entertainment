@@ -1,0 +1,16 @@
+@import "variables";
+
+.about-title {
+  align-items: center;
+  height: 8em;
+  font-weight: normal;
+  background-color: $primary-color;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+
+  h1 {
+    font-size: 1.77em;
+    font-weight: 600;
+  }
+}

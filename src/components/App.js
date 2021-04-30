@@ -1,9 +1,10 @@
 import React from 'react';
+import ProtectedRoutes from "./privateComponents/ProtectedRoutes";
 
 const App = () => {
   return (
     <div className="App">
-        <h3>Hello World</h3>
+        <ProtectedRoutes/>
     </div>
   );
 };
